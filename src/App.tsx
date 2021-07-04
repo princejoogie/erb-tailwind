@@ -1,28 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.global.css';
+import TicaTacToe from './components/TicaTacToe';
 
-const Hello = () => {
-  return (
-    <div className="flex flex-col w-full h-screen items-center bg-black justify-center text-white">
-      <h1 className="text-3xl text-white">Hello World</h1>
-      <a
-        href="https://github.com/princejoogie"
-        target="_blank"
-        rel="noreferrer"
-      >
-        princejoogie
-      </a>
-    </div>
-  );
-};
-
-export default function App() {
+const App: React.FC = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/" component={Hello} />
+        <Route path="/" component={TicaTacToe} />
       </Switch>
     </Router>
   );
-}
+};
+
+export default App;

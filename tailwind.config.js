@@ -1,17 +1,20 @@
-import colors from 'tailwindcss/colors';
+const colors = require('tailwindcss/colors');
+const color = require('tailwindcss/colors');
 
 module.exports = {
   purge: [],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        gray: colors.trueGray,
+        gray: color.trueGray,
       },
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      opacity: ['active'],
+    },
   },
   plugins: [],
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.global.css';
 
 const Home: React.FC = () => {
@@ -15,11 +15,11 @@ const Home: React.FC = () => {
 
 const App: React.FC = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <Switch>
         <Route path="/" component={Home} />
       </Switch>
-    </Router>
+    </BrowserRouter>
   );
 };
 
